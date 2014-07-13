@@ -1,0 +1,15 @@
+<article><h1>Green = Password has been Picked up | Red = Link Expired</h1></article>
+<% @authex.each do |authex| %>
+<article <%= 'class="complete"' if authex.complete %><%= 'class="expired"' if authex.expires_at < DateTime.now%>>
+<p><%=h authex.email %>
+<p><%=h authex.username %>
+<p><%=h authex.keyhash %>
+<p><a href="<%= authex.metaurl %>"><%= authex.metaurl %></a>
+<p>
+<span><a href="/<%= authex.id %>">[view]</a></span>
+</p>
+<p class="meta">Created: <%= authex.created_at.strftime("%m/%d/%Y - %I:%M%p") %></p>
+<p class="meta">Expires: <%= authex.expires_at.strftime("%m/%d/%Y - %I:%M%p") %></p>
+</article>
+<% end %>
+

@@ -1,0 +1,8 @@
+<% if @authex %>
+<article>
+<p>Email: <%= @authex.email %>
+<p>Username: <%= @authex.username %>
+<p>Created at: <%= @authex.created_at.strftime("%m/%d/%Y - %I:%M%p") %>
+<p>Expires at:<%= @authex.expires_at.strftime("%m/%d/%Y - %I:%M%p") %>
+</article>
+<% end %>

@@ -1,0 +1,9 @@
+<% if @authex %>
+<article>
+<strong>A confirmation email has been sent to the below email to reset the password for the user below.</strong><p>
+<p>Email: <%= @authex.email %>
+<p>Username: <%= @authex.username %>
+<p>Created at: <%= @authex.created_at.strftime("%m/%d/%Y - %I:%M%p") %>
+<p>Expires at:<%= @authex.expires_at.strftime("%m/%d/%Y - %I:%M%p") %>
+</article>
+<% end %>

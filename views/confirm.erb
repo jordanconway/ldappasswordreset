@@ -1,0 +1,16 @@
+<section id="request">
+    Enter your own new password - or leave it blank to have a new random password created for you.
+    <form action"/confirm" method="post">
+        <input type="text" name="myPasswd" placeholder="enter new password&hellip;">
+        <input type="submit" value="Do It!">
+    </form>
+</section>
+
+<% if @authex %>
+<article>
+<p>Email: <%= @authex.email %>
+<p>Username: <%= @authex.username %>
+<p>Created at: <%= @authex.created_at.strftime("%m/%d/%Y - %I:%M%p") %>
+<p>Expires at:<%= @authex.expires_at.strftime("%m/%d/%Y - %I:%M%p") %>
+</article>
+<% end %>

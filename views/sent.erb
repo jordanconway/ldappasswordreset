@@ -1,0 +1,12 @@
+<% if @authex %>
+<article>
+<strong>Thank you for confirming - Password has been reset and you can view your new password below</strong><p>
+<p>
+<a href="<%= @authex.url %>">Click to get your secret password!</a>
+<p>
+<p>Email: <%= @authex.email %>
+<p>Username: <%= @authex.username %>
+<p>Created at: <%= @authex.created_at.strftime("%m/%d/%Y - %I:%M%p") %>
+<p>Expires at:<%= @authex.expires_at.strftime("%m/%d/%Y - %I:%M%p") %>
+</article>
+<% end %>
