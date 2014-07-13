@@ -5,15 +5,15 @@ A ruby/sinatra based self-serve ldap password reset webapp using self-destruct
 messages with onetimesecret
 
 ** The following gems are required**
-*require 'rubygems'
-*require 'sinatra'
-*require 'data_mapper'
-*require 'digest/sha1'
-*require 'net/smtp'
-*require 'onetime/api'
-*require 'net/ssh'
-*require "ldap"
-*require 'base64'
+* rubygems
+* sinatra
+* data_mapper
+* digest/sha1
+* net/smtp
+* onetime/api
+* net/ssh
+* ruby-ldap
+* base64
 
 **usage:**
 `ruby passwordreset.rb`
